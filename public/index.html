@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your PDF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Upload Your PDF</h1>
+    </header>
+    
+    <section class="upload-section">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="pdf-upload" class="upload-button">Choose PDF</label>
+            <input type="file" id="pdf-upload" name="pdf-file" accept=".pdf" required>
+            <button type="submit" class="submit-button">Upload PDF</button>
+        </form>
+
+        <!-- Display uploaded PDF link -->
+        <div id="file-link" style="display:none;">
+            <p>File uploaded successfully. <a id="pdf-link" href="#" target="_blank">View the PDF</a></p>
+        </div>
+
+        <!-- Button to view all uploaded PDFs -->
+        <button id="view-all-button" class="submit-button">View All PDFs</button>
+
+        <!-- Section to display list of uploaded PDFs -->
+        <div id="pdf-list" style="display:none;">
+            <h2>All Uploaded PDFs:</h2>
+            <ul id="pdf-links-list"></ul>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
+</body>
+</html>
